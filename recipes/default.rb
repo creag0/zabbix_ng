@@ -19,3 +19,4 @@
 #
 
 include_recipe 'zabbix_ng::agent'
+include_recipe 'seven_zip::default'

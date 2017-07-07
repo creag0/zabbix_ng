@@ -9,3 +9,5 @@ issues_url       'https://github.com/chr4-cookbooks/zabbix_ng/issues' if respond
 version          '1.1.0'
 depends          'apt'
 depends          'sudo'
+depends          'seven_zip'
+depends          'windows'

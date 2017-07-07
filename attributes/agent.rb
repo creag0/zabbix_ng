@@ -21,3 +21,6 @@
 default['zabbix_ng']['zabbix_agent']['timeout'] = 30
 default['zabbix_ng']['zabbix_agent']['logfile'] = '/var/log/zabbix/zabbix_agentd.log'
 default['zabbix_ng']['zabbix_agent']['pidfile'] = '/var/run/zabbix/zabbix_agentd.pid'
+
+#For Windows Agent
+default['zabbix_ng']['win_agent']['source'] ='http://www.zabbix.com/downloads/3.0.4/zabbix_agents_3.0.4.win.zip'

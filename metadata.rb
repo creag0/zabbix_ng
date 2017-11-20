@@ -6,7 +6,7 @@ description      'Installs/Configures zabbix_ng'
 long_description 'Installs/Configures zabbix_ng'
 source_url       'https://github.com/chr4-cookbooks/zabbix_ng' if respond_to?(:source_url)
 issues_url       'https://github.com/chr4-cookbooks/zabbix_ng/issues' if respond_to?(:issues_url)
-version          '1.1.0'
+version          '1.1.1'
 depends          'apt'
 depends          'sudo'
 depends          'seven_zip'

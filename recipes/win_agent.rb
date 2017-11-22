@@ -15,12 +15,12 @@ end
 
 # Unzip Zabbix Agent media
 seven_zip_archive 'zabbix_agent_source' do
-  path      ['zabbix_ng']['win_agent']['inst_dir']
+  path      node['zabbix_ng']['win_agent']['inst_dir']
   source    node['zabbix_ng']['win_agent']['inst_media']
   overwrite true
   timeout   30
   #not_if	{::File.exists?('C:\\zabbix_agents_3.0.4.win')}
-	not_if	{::File.exists?node['zabbix_ng']['win_agent']['inst_dir']}
+	not_if	"::File.exists?#{node['zabbix_ng']['win_agent']['inst_dir']}"
 end
 
 # Install Zabbix Agent

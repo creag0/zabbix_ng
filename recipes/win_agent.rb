@@ -26,7 +26,7 @@ end
 # Install Zabbix Agent
 execute 'zabbix-agent' do
 	#command 'C:\\zabbix_agents_3.0.4.win\\bin\\win64\\zabbix_agentd.exe --config C:\\zabbix_agents_3.0.4.win\\conf\\zabbix_agentd.win.conf --install'
-	command 'node['zabbix_ng']['win_agent']['inst_dir']\\bin\\win64\\zabbix_agentd.exe --config C:\\zabbix_agents_3.0.4.win\\conf\\zabbix_agentd.win.conf --install'
+	command node['zabbix_ng']['win_agent']['inst_dir'] + '\\bin\\win64\\zabbix_agentd.exe --config C:\\zabbix_agents_3.0.4.win\\conf\\zabbix_agentd.win.conf --install'
 	#not_if  {::File.exists?('C:\\zabbix_agents_3.0.4.win')}
   	not_if 'sc query "Zabbix Agent" | find "RUNNING"'
 end
